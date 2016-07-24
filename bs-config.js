@@ -19,7 +19,7 @@ module.exports = {
             "port": 8080
         }
     },
-    "files": ["style.css", "bundle.js", "index.html"],
+    "files": ["styles.css", "bundle.js", "index.html", "**/*.html"],
     "watchOptions": {},
     "server": true,
     "proxy": false,

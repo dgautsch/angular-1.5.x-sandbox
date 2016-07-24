@@ -6,7 +6,7 @@
 
 module.exports = function() {
   return {
-    controller: 'NavigationController',
+    controller: 'NavigationCtrl',
     controllerAs:'nav',
     restrict: 'E',
     templateUrl: 'navigation/navigation.tpl.html'
