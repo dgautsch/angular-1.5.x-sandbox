@@ -1,0 +1,23 @@
+{
+  "name": "angularsandbox",
+  "version": "1.0.0",
+  "description": "A sandbox for Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify app.js -o bundle.js",
+    "dev": "watchify app.js -o bundle.js -v | browser-sync start --config bs-config.js"
+  },
+  "keywords": [
+    "Angular",
+    "JavaScript"
+  ],
+  "author": "Dan Gautsch",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.x",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "watchify": "^3.7.0"
+  }
+}
