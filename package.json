@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify app.js -o bundle.js",
-    "build-css": "node-sass --include-path scss main.scss styles.css",
-    "dev": "npm run watch-css | watchify app.js -o bundle.js -v | browser-sync start --config bs-config.js",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build": "./bin/build",
+    "build-css": "./bin/build-css",
+    "build-js": "./bin/build-js",
+    "dev": "./bin/dev-server",
+    "watch-css": "./bin/watch-css",
+    "watch-js": "./bin/watch-js"
   },
   "keywords": [
     "Angular",
