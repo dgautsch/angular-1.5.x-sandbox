@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./bin/build",
-    "build-css": "./bin/build-css",
-    "build-js": "./bin/build-js",
-    "dev": "./bin/dev-server",
-    "watch-css": "./bin/watch-css",
-    "watch-js": "./bin/watch-js"
+    "build": ".\\bin\\build.sh",
+    "build-css": ".\\bin\\build-css.sh",
+    "build-js": ".\\bin\\build-js.sh",
+    "dev": ".\\bin\\dev-server.sh",
+    "watch-css": ".\\bin\\watch-css.sh",
+    "watch-js": ".\\bin\\watch-js.sh"
   },
   "keywords": [
     "Angular",
