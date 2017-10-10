@@ -4,13 +4,13 @@
   "description": "A sandbox for Angular",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": ".\\bin\\build.sh",
-    "build-css": ".\\bin\\build-css.sh",
-    "build-js": ".\\bin\\build-js.sh",
-    "dev": ".\\bin\\dev-server.sh",
-    "watch-css": ".\\bin\\watch-css.sh",
-    "watch-js": ".\\bin\\watch-js.sh"
+    "build": "concurrently \"npm run build-css\" \"npm run build-js\"",
+    "build-css": "node-sass --include-path scss app/main.scss dist/styles.css",
+    "build-js": "browserify app/app.js -o dist/bundle.js",
+    "dev": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run server\"",
+    "watch-css": "nodemon -e scss -x npm run build-css",
+    "watch-js": "watchify app/app.js -o dist/bundle.js -v",
+    "server": "browser-sync start --config bs-config.js"
   },
   "keywords": [
     "Angular",
@@ -21,9 +21,10 @@
   "devDependencies": {
     "angular": "^1.5.x",
     "browser-sync": "^2.13.0",
-    "browserify": "^13.0.1",
+    "browserify": "^14.4.0",
+    "concurrently": "^3.5.0",
     "node-sass": "^3.8.0",
     "nodemon": "^1.9.2",
-    "watchify": "^3.7.0"
+    "watchify": "^3.9.0"
   }
 }
