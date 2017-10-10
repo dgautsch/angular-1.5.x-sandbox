@@ -1,0 +1,46 @@
+.cn-social-widget {
+  background: #FFF;
+  width: 100%;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  &__control,
+  &__number, {
+    font-size: 12px;
+  }
+  &__control {
+    display: inline-block;
+    button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      &:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+      }
+    }
+  }
+  &__number {
+    text-align: left;
+    border: none;
+    background: transparent;
+  }
+  .cn-social-favorite {
+    &.cn-social__active {
+      svg path {
+        fill: #f95343;
+        stroke: none;
+      }
+    }
+  }
+  .cn-social-bookmark {
+    &.cn-social__active {  
+      svg path {
+        fill: #2574a0;
+        stroke: none;
+      }
+    }
+  }
+}

@@ -1,12 +1,15 @@
-angular.module('sandboxApp').directive('social', function() {
+angular.module('sandboxApp').controller('SocialController', require('./social.controller.js'));
+angular.module('sandboxApp')
+.directive('cnSocial', function() {
   return {
     restrict: 'E',
     scope: {
-      theme: '='
+      theme: '@',
+      config: '='
     },
     templateUrl: 'social/social.html',
-    link: function ($scope, el, attrs) {
-      $scope.theme = attrs.theme;
-    }
+    controller: 'SocialController',
+    controllerAs: '$ctrl',
+    bindToController: true
   }
 })

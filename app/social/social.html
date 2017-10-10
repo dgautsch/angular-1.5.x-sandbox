@@ -1,8 +1,28 @@
-<div class="social" ng-class={{theme}}>
-  Social
+<div class="cn-social-widget {{theme}}">
   <ul>
-    <li>Favorite</li>
-    <li>Like</li>
-    <li>Comments</li>
+    <li class="cn-social-widget__control">
+      <button type="button">Share</button>
+    </li>
+    <li class="cn-social-widget__control cn-social-favorite" ng-class="{'cn-social__active': $ctrl.incremented.favorites === true}">
+      <button type="button" ng-click="$ctrl.handleSocialClick('favorites')">
+        <svg role="presentation" focusable="false" width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"><title>Favorite Icon</title><path d="M12.057 1.664C11.37.944 10.445.538 9.43.514c-.874-.013-1.696.26-2.352.78l-.308.245-.31-.243C5.27.37 3.643.237 2.36.974 1.347 1.56.682 2.534.53 3.636c-.147 1.1.234 2.182 1.05 2.98l4.855 4.75c.09.087.205.134.332.134.127 0 .242-.047.332-.135l4.786-4.682c1.42-1.377 1.49-3.633.17-5.02z" stroke="#666" fill="none" fill-rule="evenodd"/></svg>
+        <span class="acc-hidden" aria-live>Click to favorite</span>
+      </button>
+      <span class="cn-social-widget__number">{{$ctrl.social.favorites}}</span>
+    </li>
+    <li class="cn-social-widget__control cn-social-bookmark" ng-class="{'cn-social__active': $ctrl.incremented.bookmarks === true}">
+      <button type="button" ng-click="$ctrl.handleSocialClick('bookmarks')">
+        <svg role="presentation" focusable="false" width="10" height="12" viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"><title>Bookmark Icon</title><desc>A bookmark icon to bookmark content.</desc><path d="M1.5.5C.933.5.5.846.5 1.2v10.133c0 .06.007.077.034.1.052.042.15.067.278.067.02 0 .036-.004.044-.008L5 9.382l.227.114 3.917 1.996c.01.004.024.008.044.008.127 0 .226-.025.277-.067.028-.023.035-.04.035-.1V1.2c0-.354-.433-.7-1-.7h-7z" stroke="#666" fill="none" fill-rule="evenodd"/></svg>
+        <span class="acc-hidden" aria-live>Click to bookmark</span>
+      </button>
+      <span class="cn-social-widget__number">{{$ctrl.social.bookmarks}}</span>
+    </li>
+    <li class="cn-social-widget__control cn-social-comment">
+      <button type="button">
+        <svg role="presentation" focusable="false" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><title>Comment Icon</title><path d="M9.566 10.8V8.47h1.005c.514 0 .93-.413.93-.916V1.416c0-.504-.416-.916-.93-.916H1.43C.915.5.5.912.5 1.416v6.138c0 .503.416.916.93.916h5.786l2.35 2.33z" stroke="#666" fill="none" fill-rule="evenodd"/></svg>
+        <span class="acc-hidden" aria-live>Click to comment</span>
+      </button>
+      <span class="cn-social-widget__number">{{$ctrl.social.comments}}</span>
+    </li>
   </ul>
 </div>
