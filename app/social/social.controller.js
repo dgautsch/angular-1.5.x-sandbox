@@ -7,6 +7,7 @@
 module.exports = ['$scope', '$log', function ($scope, $log) {
   this.social = this.config.social;
   this.incremented = this.config.incremented;
+  this.active = this.config.active;
 
   this.handleSocialClick = function ($event, $id, feature) {
     if (this.incremented[feature]) {
@@ -32,5 +33,6 @@ module.exports = ['$scope', '$log', function ($scope, $log) {
 
   this.updateOmniture = function (event) {
     // this should be abstracted to a service
+    $scope.$emit('AnalyticsTrack', event);
   };
 }];

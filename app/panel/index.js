@@ -1,7 +1,7 @@
-function PanelController($scope) {
+function PanelController ($scope) {
   $scope.$on('SocialInteraction', function (event, value) {
     console.log(event, value);
-  })
+  });
   $scope.data = {
     social: {
       bookmarks: 1002,
@@ -11,9 +11,14 @@ function PanelController($scope) {
     incremented: {
       bookmarks: false,
       favorites: false
+    },
+    active: {
+      bookmarks: true,
+      comments: true,
+      favorites: true
     }
   };
-};
+}
 angular.module('sandboxApp').directive('panel', function () {
   return {
     restrict: 'E',
@@ -23,5 +28,5 @@ angular.module('sandboxApp').directive('panel', function () {
     templateUrl: 'panel/panel.html',
     controller: PanelController,
     bindToController: true
-  }
-})
+  };
+});
