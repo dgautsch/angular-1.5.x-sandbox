@@ -19,10 +19,10 @@
   ],
   "author": "Dan Gautsch",
   "license": "MIT",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "angular": "1.3.x",
+    "angular-aria": "^1.3.20",
     "browser-sync": "^2.13.0",
     "browserify": "^14.4.0",
     "concurrently": "^3.5.0",
