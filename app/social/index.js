@@ -1,6 +1,7 @@
 angular.module('sandboxApp').controller('SocialController', require('./social.controller.js'));
+angular.module('sandboxApp').service('SocialService', require('./social.service.js'));
 angular.module('sandboxApp')
-.directive('cnSocial', function() {
+.directive('cnSocial', function () {
   return {
     restrict: 'E',
     scope: {
@@ -11,5 +12,5 @@ angular.module('sandboxApp')
     controller: 'SocialController',
     controllerAs: '$ctrl',
     bindToController: true
-  }
-})
+  };
+});

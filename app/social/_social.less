@@ -21,6 +21,10 @@
         transform: scale(1.3);
       }
     }
+    svg {
+      width: auto;
+      height: 12px;
+    }
   }
   &__number {
     text-align: left;
@@ -40,6 +44,49 @@
       svg path {
         fill: #2574a0;
         stroke: none;
+      }
+    }
+  }
+  &.orange {
+    .cn-social-favorite {
+      &.cn-social__active {
+        svg path {
+          fill: orange;
+          stroke: none;
+        }
+      }
+    }
+    .cn-social-bookmark {
+      &.cn-social__active {  
+        svg path {
+          fill: orange;
+          stroke: none;
+        }
+      }
+    }
+  }
+  &.blue {
+    .cn-social-widget__control,
+    .cn-social-widget__number, {
+      font-size: 14px;
+    }
+    svg {
+      height: 20px;
+    }
+    .cn-social-favorite {
+      &.cn-social__active {
+        svg path {
+          fill: blue;
+          stroke: none;
+        }
+      }
+    }
+    .cn-social-bookmark {
+      &.cn-social__active {  
+        svg path {
+          fill: blue;
+          stroke: none;
+        }
       }
     }
   }

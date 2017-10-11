@@ -1,4 +1,7 @@
 function PanelController($scope) {
+  $scope.$on('SocialInteraction', function (event, value) {
+    console.log(event, value);
+  })
   $scope.data = {
     social: {
       bookmarks: 1002,
@@ -14,7 +17,9 @@ function PanelController($scope) {
 angular.module('sandboxApp').directive('panel', function () {
   return {
     restrict: 'E',
-    scope: {},
+    scope: {
+      theme: '@'
+    },
     templateUrl: 'panel/panel.html',
     controller: PanelController,
     bindToController: true
